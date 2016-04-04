@@ -1,0 +1,19 @@
+{
+  "name": "tst-app",
+  "description": "",
+  "main": "main.js",
+  "authors": [
+    "Z"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}
