@@ -19,9 +19,6 @@
     "babel-preset-react": "^6.5.0",
     "babel-runtime": "^6.6.1",
     "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-concat": "^2.6.0",
-    "gulp-less": "^3.0.5",
     "gulp-webpack": "^1.5.0",
     "webpack": "^1.12.14"
   },

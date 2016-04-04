@@ -1,10 +1,10 @@
 import { createStore } from 'redux';
 import _ from 'lodash';
 
-import { ADD_DOG } from './constants/dogs';
+import { ADD_DOG, REMOVE_DOG } from './constants/dogs';
 import * as actions from './reducers/dogs';
 
-const initialState = {
+export const initialState = {
   name: 'Joe',
   age: 23,
   dogs: []
