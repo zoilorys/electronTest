@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     webpack = require('webpack');
 
 gulp.task('webpack', function() {
-	gulp.src('src/*.js')
+	return gulp.src('src/*.js')
 		.pipe(gulpack( require('./webpack.config.js'), webpack))
 		.pipe(gulp.dest('dist'));
 });

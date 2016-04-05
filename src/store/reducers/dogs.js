@@ -1,13 +1,15 @@
 import _ from 'lodash';
 
 export function addDog(state, payload) {
-  let newState = _.assign({}, state);
-  newState.dogs.push(payload);
-  return newState;
+  return {
+    ...state,
+    dogs: state.dogs.concat(payload)
+  };
 }
 
 export function removeDog(state, payload) {
-  let newState = _.assign({}, state);
-  newState.dogs = newState.dogs.filter((dog, index) => index !== payload);
-  return newState;
+  return {
+    ...state,
+    dogs: state.dogs.filter((dog, index) => index !== payload)
+  };
 }

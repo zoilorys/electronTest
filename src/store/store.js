@@ -2,20 +2,20 @@ import { createStore } from 'redux';
 import _ from 'lodash';
 
 import { ADD_DOG, REMOVE_DOG } from './constants/dogs';
-import * as actions from './reducers/dogs';
+import { addDog, removeDog } from './reducers/dogs';
 
 export const initialState = {
   name: 'Joe',
   age: 23,
-  dogs: []
+  dogs: [{name: 'lucy', age: 34}]
 };
 
-function dogOwner(state = initialState, action) {
-  switch(action.type) {
+function dogOwner(state = initialState, { type, payload }) {
+  switch(type) {
     case ADD_DOG:
-      return actions.addDog(state, action.payload);
+      return addDog(state, payload);
     case REMOVE_DOG:
-      return actions.removeDog(state, action.payload);
+      return removeDog(state, payload);
     default:
       return state;
   }
