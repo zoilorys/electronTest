@@ -21,4 +21,6 @@ function dogOwner(state = initialState, action) {
   }
 }
 
-export const store = createStore(dogOwner);
+const store = createStore(dogOwner);
+
+export default store;

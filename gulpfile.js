@@ -9,7 +9,7 @@ gulp.task('webpack', function() {
 });
 
 gulp.task('watcher', function() {
-  gulp.watch('src/*.js', ['webpack']);
+  gulp.watch('src/**/**/*.js', ['webpack']);
 });
 
 gulp.task('default', ['webpack']);

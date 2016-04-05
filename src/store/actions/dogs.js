@@ -5,9 +5,9 @@ export function addDog(dog) {
   };
 }
 
-export function removeDog(dog) {
+export function removeDog(index) {
   return {
     type: 'REMOVE_DOG',
-    payload: dog
+    payload: index
   };
 }

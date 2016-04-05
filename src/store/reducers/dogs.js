@@ -8,6 +8,6 @@ export function addDog(state, payload) {
 
 export function removeDog(state, payload) {
   let newState = _.assign({}, state);
-  newState.dogs = newState.dogs.filter(dog => dog.name !== payload.name);
+  newState.dogs = newState.dogs.filter((dog, index) => index !== payload);
   return newState;
 }
