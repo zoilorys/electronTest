@@ -1,9 +1,10 @@
-const fs = require('fs');
+const remote = require('remote');
+const fs = remote.require('fs');
 import path from 'path';
 
 import React, { Component } from 'react';
 
-import store from '../store/store';
+import { initialState } from '../store/store';
 
 export default class MainPage extends Component {
   render() {
@@ -14,11 +15,12 @@ export default class MainPage extends Component {
       </div>
     );
   }
-  
+
   _saveState() {
+    let filepath = '/home/zoilorys/result.json';
     fs.writeFile(
-      path.join(__dirname, '..', '..', 'result.json'), //filename
-      JSON.stringify(store), //content
+      filepath,
+      JSON.stringify(initialState), //content
       console.log.bind(console)
     );
   }

@@ -5,12 +5,14 @@ const webpack = require('webpack');
 module.exports = {
 	entry: {
 		entry: './src/app',
-	},	
+	},
 
 	output: {
 		path: __dirname + "/dist",
 		filename: 'bundle.js'
 	},
+
+	target: 'electron',
 
 	module: {
 		loaders: [{
@@ -22,7 +24,7 @@ module.exports = {
 			}
 		}]
 	},
-	
+
 	// plugins: [
 	// 	new webpack.optimize.UglifyJsPlugin({
 	// 		compress: {
